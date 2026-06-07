@@ -241,7 +241,7 @@
       function deliver() {
         if (type === "lead") {
           var dl = form.getAttribute("data-download");
-          if (dl) { var a = document.createElement("a"); a.href = dl; a.download = ""; a.target = "_blank"; document.body.appendChild(a); a.click(); a.remove(); }
+          if (dl) window.open(dl, "_blank", "noopener");
         }
       }
 
