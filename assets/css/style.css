@@ -628,3 +628,10 @@ strong { color: var(--ink); font-weight: 700; }
   .nav-logo .wm small { font-size: .62rem; }
   .hero-badge .n { font-size: 1.3rem; }
 }
+/* keep 3D reveal pre-states from pushing horizontal scroll on small screens */
+@media (max-width: 980px){
+  .r3d.swing-l:not(.in), .r3d.swing-r:not(.in),
+  .r3d.zoom-blur:not(.in), .r3d.flip-x:not(.in) { transform: translateY(34px); }
+  .r3d.zoom-blur:not(.in) { filter: none; }
+  html, body { overflow-x: clip; }
+}
